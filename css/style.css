@@ -3,6 +3,7 @@ body {
 	margin: auto;
 	background-color: #1E1E1E;
 	align-items: center;
+	font-family: "Inter", sans-serif;
 }
 
 
@@ -45,7 +46,6 @@ h1, h2, p, h3, nav{
 
 .hero-text {
 	text-align: left;
-	position: absolute;
 	top: 15%;
 	left: 15%;
 	color: white;
@@ -550,6 +550,7 @@ ul li .search {
 
 
 .card_container {
+	flex-direction: column;
 	max-width: 1000px;
 	margin: auto;
 	text-align: left;
