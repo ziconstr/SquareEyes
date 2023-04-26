@@ -355,18 +355,10 @@ ul li .search {
   }
 
 .box {
-	border: 1px solid black;
+	position: relative;
 	margin-top: 100px;
-	margin-bottom: 100px;
-	margin-right: 150px;
-	margin-left: 80px;
-	width: 529px;
-	height: 681px;
-	left: 182px;
-	top: 301px;
-
-	background: #000000;
-	border-radius: 15px;
+	width: min(90%, 1000%);
+	margin-inline: auto;
   }
 
 
