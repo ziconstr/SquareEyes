@@ -304,7 +304,7 @@ ul li .search {
   }
   
   .button {
-	position: relative;
+	margin: 10px auto;
 	border: none;
 	outline: 0;
 	display: inline-block;
