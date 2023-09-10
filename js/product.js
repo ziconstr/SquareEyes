@@ -1,5 +1,3 @@
-const rainyDaysAPI = "https://api.noroff.dev/api/v1/square-eyes/";
-
 const container = document.querySelector(".product-wrapper")
 
 const queryString = document.location.search;
