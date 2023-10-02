@@ -1,3 +1,5 @@
+fetch("https://api.noroff.dev/api/v1/square-eyes/")
+
 const rainyDaysAPI = "https://api.noroff.dev/api/v1/square-eyes/";
 
 const container = document.querySelector(".product-wrapper")
