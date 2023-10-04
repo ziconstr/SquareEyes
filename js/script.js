@@ -1,97 +1,66 @@
-fetch("https://api.noroff.dev/api/v1/square-eyes/")
+const squareEyesAPI = "https://api.noroff.dev/api/v1/square-eyes";
 
-const rainyDaysAPI = "https://api.noroff.dev/api/v1/square-eyes/";
+const getMovieText = document.querySelectorAll(".movieText");
 
-const container = document.querySelector(".product-wrapper")
-
-const queryString = document.location.search;
-
-const params = new URLSearchParams(queryString);
-
-const id = params.get("id");
-
-
-async function getProduct(){
-  const response = await fetch(`https://api.noroff.dev/api/v1/square-eyes/${id}`)
-  const movie = await response.json()
-
-  container.innerHTML = `
-  <div class="product-wrapper">
-  <div class="product-card">
-   <div class="product-card-image">
-   <img src="${movie.image}" class="filmcover-product" alt="Cover image of the movie" />
-   </div>
-   <div class="product-card-content">
-    <div class="product-content-container">
-     <h1 class="film-title-product">${movie.title}</h1>
-     <p class="film-category">${movie.genre} | ${movie.released} | Rating: ${movie.rating} | 4k</p>
-     <p>
-      ${movie.description}
-     </p>
-     <div class="price-cta-container">
-      <p class="price-product">${movie.price}$</p>
-      <a href="./checkout.html" class="cta">Buy Now</a>
-     </div>
-    </div>
-   </div>
-  </div>
- </div>
-  `
-  
+async function getMovies() {
+  const response = await fetch(squareEyesAPI);
+  const result = await response.json();
+  return result;
 }
 
-getProduct()
 
 
-// import { baseApiUrl, endpointApiUrl } from "./apiService.js";
-// import { createMessage } from "./errorMessage.js";
-// import {getMovie} from "./APIsingle.js";
+async function displayMovies() {
+  const movies = await getMovies();
+  const moviesContainer = document.getElementById("movies_container");
+  console.log(moviesContainer.outerHTML);
 
-// const queryString = document.location.search;
+  for (i = 0; i < movies.length; i++) {
+    const movie = movies[i];
 
-// const params = new URLSearchParams(queryString);
 
-// const id = params.get("id");
+    if (movie.onSale){
+        const movieDiv = document.createElement("div");
+        movieDiv.classList.add("movie");
 
-// console.log(id);
+        const image = document.createElement("img");
+        image.srt = movie.image;
+        image.alt = movie.description;
 
-// const product = document.querySelector(".container");
-// const apiUrl = `${baseApiUrl}${endpointApiUrl}`;
+        const movieText = document.createElement("p");
+        movieText.classList.add("container-movies");
+        movieText.innerHTML = `${movie.tittle} <span class="movieSale">${movie.price} </span>  $${movie.discountedPrice}`;
 
-// async function createHtml() {
-//     const movie = await getMovie();
+        const button = document.createElement("a");
+        button.href = "#";
+        button.classList.add("button");
+        button.textContent = "Add to bag";
 
-//     product.innerHTML = '';
-//     product.innerHTML +=
-//         `<section class="product-wrapper">
-//             <div class="product-card">
-//                 <h1>${movie.title}</h1>
-//                 <p class="product-content-container">${movie.description}</p>     
-//                 <p>Release date: ${movie.released}</p>
-//                 <p>Rated: ${movie.rating}</p>
-//                 <p>Genre: ${movie.genre}</p>
-//                 <h2 id="price"></h2>
-//                 <h3 id="sale"></h3>
-//             </div>
-//             <div class="product-card-image">
-//                 <img src="${movie.image}" alt="Cover image of the movie" class="img">
-//                 <a href="cart.html" class="cta" id="ctaproduct">BUY NOW</a>
-//             </div>
-//         </section>`;
+        moviesContainer.appendChild(image);
+        moviesContainer.appendChild(movieText);
+        moviesContainer.appendChild(button);
+        
 
-//     document.title = movie.title;
+    }
+  }
+}
 
-//     if (movie.onSale === true){
 
-//         document.getElementById('sale').innerHTML += `<h3 id="sale">$ ${movie.discountedPrice}</h3>`;
-//         document.getElementById('price').innerHTML += `<h2 id="reduced-price">$ ${movie.price}</h2>`;
-//     }
+displayMovies ();
 
-//     else {
-//         document.getElementById('price').innerHTML += `<h2>$ ${movie.price}</h2>`;
-//         document.getElementById('sale').innerHTML = ``;
-//     }
 
-// }
+  // for (let i = 0; i < result.length; i++) {
+  //   console.log(result[i]);
+  // }
 
-// createHtml();
+  // for (let i = 0; i < getMovieText.length; i++) {
+  //   let moviesOnSale = result[i].onSale;
+
+  //   getMovieText[i].innerHTML = ` ${result[i].tittle} $${result[i].price}`;
+
+  //   if (moviesOnSale === true) {
+  //     result[i].price = getMovieText[
+  //       i
+  //     ].innerHTML = `${result[i].tittle} <span class="moviesale">${result[i].price} </span> $${result}
+  //   } 
+  // }

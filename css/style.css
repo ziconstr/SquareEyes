@@ -258,7 +258,7 @@ ul li .search {
 	box-sizing: inherit;
   }
   
-  .column {
+  .container-movie {
 	display: flex;
 	width: 17%;
 	margin-bottom: 16px;
@@ -269,7 +269,7 @@ ul li .search {
   }
   
   @media screen and (max-width: 650px) {
-	.column {
+	.container-movie {
 	  width: 100%;
 	  display: block;
 	}
