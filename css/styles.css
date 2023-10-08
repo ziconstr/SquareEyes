@@ -7,7 +7,6 @@
     --bg-color5:rgb(30, 29, 29);
     --bg-color6:rgb(111, 108, 108);
     --bg-color7:#002140;
-    --bg-color8:#0085ff;
     --bg-size1:12px;
     --bg-size2:30px;
 }
@@ -249,7 +248,7 @@ main{
     display: flex;
     justify-content:space-around; 
     align-items: center;
-    font-size: 2vw;  
+    font-size: 1vw;  
 }
 .logo-footer{
     display: flex;
@@ -617,57 +616,6 @@ input{
 
 
 
-.checkout{
-    width:90%;
-    font-size: var(--bg-size2);
-    margin-left: 4.2vw;
-    padding-top: var(--bg-size2);
-}
-.checkout .fa-cart-shopping{
-    margin-left: 15vw;
-    color:var(--bg-color8);
-    font-size: 50px;
-}
-.checkout h1, .checkout h3{
-    font-weight: lighter;
-}
-.checkout h1{
-    margin-top: 5px;
-}
-.buying-container{
-    width:100%;
-    height:40%;
-    display: grid;
-    grid-template-rows: 30% 30% 30%;
-    font-size: 23px;
-    grid-row-gap: 20px;
-}
-.buying1, .buying2{
-    width:100%;
-    height: auto;
-    display: grid;
-    grid-template-columns: 20% 35% 10%;
-    align-items: center;
-    text-align: center;   
-}
-.buying1 img, .buying2 img{
-    width: 80%;
-    border-radius: 5px;
-    margin-left:5.6vw
-}
-.pay-end{
-    width: 80%;
-    display: grid;
-    grid-template-columns: 30% 30%;
-    grid-template-rows: auto auto;
-    text-align: center;
-    margin-left: 14vw;
-    margin-bottom: var(--bg-size2);
-}
-.payment, .total{
-    font-size:var(--bg-size2);
-    font-weight: bolder;
-}
 
 /* Log In Page */
 
@@ -675,85 +623,12 @@ input{
     width: var(--bg-size2);
     height: var(--bg-size2);
 }
-.login-container{
-    padding-top:150px; 
-    text-align: center;
-}
-.register input, .register label, .choose label{
-   height: 60px;
-    font-size: var(--bg-size2);
-    border-radius: 5px;
-    color:var(--bg-color1)
-}
-.register{
-    display: grid;
-    grid-template-columns: 25% 25% 40%;
-    justify-content: center;
-    text-align: center;
-    margin-bottom: var(--bg-size2);
-}
-#login{
-    background-color: var(--bg-color8);
-    border: 1px solid var(--bg-color8)
-}
-#signup, #order-login{
-    background-color: var(--bg-color7);
-    border:1px solid  var(--bg-color7)
-}
-.choose{
-    display: grid;
-    grid-template-columns: 30% 30%;
-    justify-content: center;
-}
-.size{
-    width:40%; 
-    height: var(--bg-size2);
-    margin-bottom: var(--bg-size2);  
-    border-radius: 5px;  
-}
-.box{
-    width: 100%;
-    font-size: 20px;
-}
-.forgot{
-    display: inline-block;
-    margin-left: 7vw;
-}
-.forgot:hover{
-    color: gray;
-}
-#signup:hover, #order-login:hover{
-    background-color: var(--bg-color8);
-    border: 1px solid var(--bg-color8)
-}
-.log{
-    margin-top: 90px;
-    margin-bottom: 190px;
-    font-size: 25px;
-}
 
 /* Sign Up Page */
 
 .read{
     font-size:14px
 }
-.sign{
-    margin-top: 50px;
-    margin-bottom: 150px;
-    font-size: 25px;
-}
-#login1, #order-login1{
-    background-color: var(--bg-color7);
-    border:1px solid  var(--bg-color7)
-}
-#signup1{
-    background-color: var(--bg-color8);
-    border: 1px solid var(--bg-color8)
-}
-#login1:hover, #order-login1:hover{
-    background-color: var(--bg-color8);
-    border: 1px solid var(--bg-color8)
-}    
 
   
 
