@@ -4,7 +4,7 @@
     --bg-color2:black;
     --bg-color3:rgb(147, 10, 10);
     --bg-color4:rgb(123, 46, 46);
-    --bg-color5:rgb(30, 29, 29);
+    --bg-color5:rgb(15, 14, 14);
     --bg-color6:rgb(111, 108, 108);
     --bg-color7:#002140;
     --bg-size1:12px;
@@ -142,7 +142,7 @@ main{
 
 .container img {
     display: block;
-    width: 200%;
+    width: 100%;
 
 
 }
@@ -715,6 +715,7 @@ input{
         flex-direction: column-reverse;
         justify-content:center;
         padding-right: initial;
+        
     }
 
     .content{
@@ -730,6 +731,7 @@ input{
     }
     .poster-header{
         font-size: 10px;
+        
     }
     .connect i, .film-name h1, .cinema-text, button{
         font-size: 20px;
