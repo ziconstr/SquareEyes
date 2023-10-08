@@ -95,7 +95,7 @@ main{
     position: relative;
 	margin-top: 100px;
 	width: min(90%, 1000%);
-	margin-inline: auto;
+    display: flex;
 }
 .content{
     width:50%;
