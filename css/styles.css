@@ -6,7 +6,7 @@
     --bg-color4:rgb(123, 46, 46);
     --bg-color5:rgb(15, 14, 14);
     --bg-color6:rgb(111, 108, 108);
-    --bg-color7:#002140;
+    --bg-color7:#ff0000;
     --bg-size1:12px;
     --bg-size2:30px;
 }
@@ -90,13 +90,72 @@ main{
     background-color: var(--bg-color5);
     color: var(--bg-color1);
     padding-top: 75px;
+    
 }
+
+.product_wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    width: 70rem;
+    max-width: 100%;
+    margin-top: 100px;
+  }
+
 .container{
     position: relative;
 	margin-top: 100px;
 	width: min(90%, 1000%);
     display: flex;
 }
+
+.product_specific {
+    /* max-width: 50rem; */
+    margin: auto;
+    padding: 2rem;
+    text-align: left;
+  }
+  
+.movie {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .movie,
+  .movie p {
+    margin: 1rem auto;
+    width: 24rem;
+    max-width: 100%;
+  }
+  
+  .movie p,
+  .movie .cta-button,
+  .movie .cta-button:hover {
+    width: 60%;
+    border-left: none;
+    border-right: none;
+    padding: 1.5rem 0rem;
+    margin: 0;
+  }
+  
+  .movie p {
+    padding: 0.4rem 0rem;
+  }
+  
+  .movieImage {
+    display: block;
+    width: 90%;
+    margin: auto;
+  }
+  
+  .movieSale {
+    text-decoration: line-through;
+  }
+
+  .discount {
+    color: var(--bg-color7)
+  }
+  
 .content{
     width:50%;
     height:auto;
@@ -132,6 +191,23 @@ main{
 .fa-user:hover{
     color:var(--bg-color4)
 }
+
+.cta-button {
+    color: var(--bg-color1);
+    background-color: var(--bg-color3);
+    font-size: 1.5vw;
+    border-radius: 7px;
+    border: 5px solid var(--bg-color3) ;
+    font-weight: bold;
+  }
+  
+  .cta-button:hover {
+    background-color: var(--bg-color4);
+    border:5px solid var(--bg-color4) ;
+  }
+  
+
+  
 
 .container {
 	position: relative;
