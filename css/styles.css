@@ -93,13 +93,18 @@ main{
     
 }
 
+
+
 .product_wrapper {
     display: flex;
     flex-wrap: wrap;
     width: 70rem;
-    max-width: 100%;
-    margin-top: 100px;
+    position: relative;
+	margin-top: 0px;
+	margin-inline: auto;
   }
+
+
 
 .container{
     position: relative;
@@ -114,45 +119,70 @@ main{
     text-align: left;
   }
 
+.movieCard {
+    margin-top: 2rem;
+  }
 .movie {
     display: flex;
+    margin-top: 2rem;
     flex-direction: column;
     justify-content: space-between;
   }
   
-  .movie,
+.movie,
   .movie p {
     margin: 1rem auto;
     width: 24rem;
     max-width: 100%;
   }
   
-  .movie p,
-  .movie .cta-button,
-  .movie .cta-button:hover {
-    width: 60%;
+.movie p,
+.movie .cta-button,
+.movie .cta-button:hover {
+    width: 50%;
     border-left: none;
     border-right: none;
     padding: 1.5rem 0rem;
     margin: 0;
   }
   
-  .movie p {
+.movie p {
     padding: 0.4rem 0rem;
   }
   
-  .movieImage {
+.movieImage {
     display: block;
     width: 90%;
     margin: auto;
   }
   
-  .movieSale {
+.movieSale {
     text-decoration: line-through;
   }
 
-  .discount {
+.discount {
     color: var(--bg-color7)
+  }
+
+.movieImage {
+    display: flex;
+}
+
+.movie img {
+    display: block;
+    width: 100%;
+
+
+}
+  
+.movie_details {
+    max-width: 550px;
+  }
+  
+.add_bag,
+.add_bag:hover {
+    margin: 1rem 0;
+    cursor: pointer;
   }
   
 .content{
@@ -175,6 +205,15 @@ main{
 	font-family: 'Inter';
 	text-shadow: 0 0 10px black;
 }
+
+.buttons {
+    flex-wrap: wrap;
+  }
+  
+.buttons > * {
+    flex: 1;
+  }
+
 .button, button{
     color: var(--bg-color1);
     background-color: var(--bg-color3);
@@ -194,7 +233,7 @@ main{
 .cta-button {
     color: var(--bg-color1);
     background-color: var(--bg-color3);
-    font-size: 2vw;
+    font-size: 2.5vw;
     border-radius: 7px;
     border: 5px solid var(--bg-color3) ;
     font-weight: bold;
