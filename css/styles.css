@@ -109,12 +109,11 @@ main{
 }
 
 .product_specific {
-    /* max-width: 50rem; */
     margin: auto;
     padding: 2rem;
     text-align: left;
   }
-  
+
 .movie {
     display: flex;
     flex-direction: column;
@@ -195,7 +194,7 @@ main{
 .cta-button {
     color: var(--bg-color1);
     background-color: var(--bg-color3);
-    font-size: 1.5vw;
+    font-size: 2vw;
     border-radius: 7px;
     border: 5px solid var(--bg-color3) ;
     font-weight: bold;
