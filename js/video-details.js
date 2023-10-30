@@ -47,55 +47,55 @@
 
 
 
-// // const squareEyesAPI = "https://api.noroff.dev/api/v1/square-eyes";
+// const squareEyesAPI = "https://api.noroff.dev/api/v1/square-eyes";
 
-// // const getMovieText = document.querySelectorAll(".movieText");
+// const getMovieText = document.querySelectorAll(".movieText");
 
-// // async function getMovies() {
-// //   const response = await fetch(squareEyesAPI);
-// //   const result = await response.json();
-// //   return result;
-// // }
-
-
-
-// // async function displayMovies() {
-// //   const movies = await getMovies();
-// //   const moviesContainer = document.getElementById("movies_container");
-// //   console.log(moviesContainer.outerHTML);
-
-// //   for (i = 0; i < movies.length; i++) {
-// //     const movie = movies[i];
+// async function getMovies() {
+//   const response = await fetch(squareEyesAPI);
+//   const result = await response.json();
+//   return result;
+// }
 
 
-// //     if (movie.onSale){
-// //         const movieDiv = document.createElement("div");
-// //         movieDiv.classList.add("movie");
 
-// //         const image = document.createElement("img");
-// //         image.srt = movie.image;
-// //         image.alt = movie.description;
+// async function displayMovies() {
+//   const movies = await getMovies();
+//   const moviesContainer = document.getElementById("movies_container");
+//   console.log(moviesContainer.outerHTML);
 
-// //         const movieText = document.createElement("p");
-// //         movieText.classList.add("container-movies");
-// //         movieText.innerHTML = `${movie.tittle} <span class="movieSale">${movie.price} </span>  $${movie.discountedPrice}`;
+//   for (i = 0; i < movies.length; i++) {
+//     const movie = movies[i];
 
-// //         const button = document.createElement("a");
-// //         button.href = "#";
-// //         button.classList.add("button");
-// //         button.textContent = "Add to bag";
 
-// //         moviesContainer.appendChild(image);
-// //         moviesContainer.appendChild(movieText);
-// //         moviesContainer.appendChild(button);
+//     if (movie.onSale){
+//         const movieDiv = document.createElement("div");
+//         movieDiv.classList.add("movie");
+
+//         const image = document.createElement("img");
+//         image.srt = movie.image;
+//         image.alt = movie.description;
+
+//         const movieText = document.createElement("p");
+//         movieText.classList.add("container-movies");
+//         movieText.innerHTML = `${movie.tittle} <span class="movieSale">${movie.price} </span>  $${movie.discountedPrice}`;
+
+//         const button = document.createElement("a");
+//         button.href = "#";
+//         button.classList.add("button");
+//         button.textContent = "Add to bag";
+
+//         moviesContainer.appendChild(image);
+//         moviesContainer.appendChild(movieText);
+//         moviesContainer.appendChild(button);
         
 
-// //     }
-// //   }
-// // }
+//     }
+//   }
+// }
 
 
-// // displayMovies ();
+// displayMovies ();
 
 
 

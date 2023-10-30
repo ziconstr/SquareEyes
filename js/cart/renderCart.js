@@ -35,7 +35,7 @@ function renderCart() {
                                    <div class="sb_movie">
                                      <img src="${item.image}" alt="${item.title}" class="product_error_img">
                                      <div>
-                                       <p><a href="product_error.html?id=${item.id}">${item.title}</a></p>
+                                       <p><a href="product_info.html?id=${item.id}">${item.title}</a></p>
                                      </div>
                                    </div>
                                  </div>`;

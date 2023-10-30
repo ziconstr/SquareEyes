@@ -5,7 +5,7 @@ async function createmovieHtml() {
   try {
     const movieDetails = await fetchmovie();
 
-    const movieWrapper = document.querySelector(".product_specific");
+    const movieWrapper = document.querySelector(".product_info");
     const titleContainer = document.querySelector("#title");
     const getLoaderDiv = document.querySelector(".loader");
     getLoaderDiv.classList.remove("loader");
@@ -15,8 +15,8 @@ async function createmovieHtml() {
                                 <div>
                                   <a href="products.html" class="cta-button">Back</a>
                                 </div>
-                                <div class="movieImage movie_specific_image">
-                                  <div class="movie-specific_image-container">
+                                <div class="movieImage movie_info_image">
+                                  <div class="movie-info_image-container">
                                   <img src="${movieDetails.images[0].src}" alt="${movieDetails.images[0].alt}">
                                   </div>
                                   <i class="fa-regular fa-heart fa-xl"></i>
