@@ -1,77 +1,51 @@
-## CMS
+### Description
+<p>
+  This was my Cross Course Assignment where we had to make a website from a selected brief, for me that was SquareEyes.
+  The target audience was people aged 25 to 40 that are interested in cinema, and enjoy watching interesting and high-quality films.
+  The Site Architecture
+  <ul>
+  <li> Homepage </li>
+  <li> List of videos page </li>
+  <li> A video page showing the product details </li>
+  <li> A checkout page</li>
+  <li> A checkout success page</li>
+  <li> About page</li>
+  <li> Contact page</li>
+  </ul>
+  I did everyghing from the beginning from making the wireframes and prototype to HMTL and CSS. 
+  This site also use JavaScript to fetch an API from headless WordPress page that i also did make. 
+</p>
 
-![image](/images/squareeyes.png)
+ ---
 
-## Description
+### Tools used
+<div>
+  <img src="https://github.com/devicons/devicon/blob/master/icons/css3/css3-plain-wordmark.svg"  title="CSS3" alt="CSS" width="40" height="40"/>
+  <img src="https://github.com/devicons/devicon/blob/master/icons/html5/html5-original.svg" title="HTML5" alt="HTML" width="40" height="40"/>
+  <img src="https://github.com/devicons/devicon/blob/master/icons/javascript/javascript-original.svg" title="JavaScript" alt="JS" width="40" height="40"/>
+</div>
 
-This project is a big showcase of what I've learned at Noroff over the past year. I started by designing it on Figma and sketching the layout on paper, putting a lot of thought into how it looks and how people will use it. Then, I built the site using HTML, CSS, and Javascript, and fecthing it to the WordPress post API for my project.
+---
 
-What's cool is that I made it connect with WordPress, where we get blog posts. It's like a special way of organizing things. So, my project isn't just a website; it's a smart website that changes and updates itself. This whole journey—from planning on Figma to making it work with WordPress and tracking user data with Hotjar—shows everything I've learned this year.
+### Design Tools
+<p>
+  <img src="https://github.com/devicons/devicon/blob/master/icons/xd/xd-line.svg" title="XD" alt="XD" width="40" height="40"/>&nbsp;
+</p>
 
-- HEADLESS
-- RESPONSIVE
-- SIMPLE
-- MOBILE FRIENDLY
+---
 
-## Built With
+### Link to page
+<div>
+  <a href="https://cross-course-joakimvanebo.netlify.app/"> SquareEyes</a>
+</div>
 
-- HTML
-- CSS
-- JavaScript
-- Wordpress API
-- Hotjar
+---
 
-## Site Architecture
+### contact
+<div>
+  <img src="https://github.com/devicons/devicon/blob/master/icons/linkedin/linkedin-original.svg"title="HTML5" alt="HTML" width="40" height="40"/>&nbsp;
+  <a href="https://www.linkedin.com/in/joakim-vanebo-93a64562/"> Linkedin/Joakimvanebo </a>
+</div>
 
-- Home
-- List of blog posts
-- Blog specific page
-- About
-- Contact
-- Footer
 
-### Installing
 
-Get started with this project.
-
-1. Clone the repo:
-
-```bash
-git clone git@github.com:ziconstr/project-exam-1-ziconstr.git
-```
-
-2. Install the dependencies:
-
-```
-npm install
-```
-
-### Running
-
-To run the app, run the following commands:
-
-```bash
-npm run start
-```
-
-also can be run with LIVE SERVER plugin in VSCODE
-
-## Contributing
-
-Available soon.
-
-## Contact
-
-"Let's connect! Find me on LinkedIn for professional updates and Twitter for casual conversations. Feel free to reach out and connect!"
-
-[My Twitter page](www.twitter.com/ziconstr)
-
-[My LinkedIn page](https://www.linkedin.com/in/zico-sebastian-825017135/)
-
-## Live project
-
-- [Netlify] https://peppy-scone-5e4579.netlify.app/
-
-## Acknowledgments
-
-This was my first Project Exam, and I made a lot of mistakes. But I tried really hard to make the website work well. This project gave me motivation and showed me things I need to get better at on my own. I had a lot of fun with this project, especially when I figured out how to get the WordPress API to work with my site – that made me really happy!
