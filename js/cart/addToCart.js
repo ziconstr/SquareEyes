@@ -1,4 +1,4 @@
-import { fetchmoviet } from "../api.js";
+import { fetchmovies } from "../api.js";
 
 function saveCart(key, value) {
   const jsonValue = JSON.stringify(value);

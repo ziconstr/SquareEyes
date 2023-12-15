@@ -1,54 +1,50 @@
-import { fetchmovie, title } from "./api.js";
+import { fetchmovies, title } from "./api.js";
 import { error } from "./error.js";
 
-async function createmovieHtml() {
+async function createMovieHtml() {
   try {
     const movieDetails = await fetchmovie();
 
-    const movieWrapper = document.querySelector(".product_info");
+    const movieWrapper = document.querySelector(".product_specific");
     const titleContainer = document.querySelector("#title");
     const getLoaderDiv = document.querySelector(".loader");
     getLoaderDiv.classList.remove("loader");
 
+    let createSizeOptions = `<option value="0">Select size</option>`;
 
-    movieWrapper.innerHTML = `
-                                <div>
-                                  <a href="products.html" class="cta-button">Back</a>
-                                </div>
-                                <div class="movieImage movie_info_image">
-                                  <div class="movie-info_image-container">
-                                  <img src="${movieDetails.images[0].src}" alt="${movieDetails.images[0].alt}">
-                                  </div>
-                                  <i class="fa-regular fa-heart fa-xl"></i>
-                                </div>
-                                <div class="movieCard">
-                                  <div>
-                                    <h3>${movieDetails.name} 
-                                    <p><span class="sales">${movieDetails.prices.regular_price} kr</span></p>
-                                    <span class="hideDiscount discount">${movieDetails.prices.sale_price} kr</span></h3>
-                                  </div>
-                                  <div class="movie_details">
-                                    <p class="movie_description"> ${movieDetails.description}</p>
-                                    <p>Colour: ${movieDetails.attributes[0].terms[0].name}</p>
-                                  </div>
-                                  <div>
-                                    <button class="cta-button add_cart" data-id="${movieDetails.id}" data-price="${movieDetails.prices.regular_price}" data-discount="${movieDetails.prices.sale_price}" data-title="${movieDetails.name}" data-onsale="${movieDetails.on_sale}" data-image="${movieDetails.images[0].src}">Add to cart</button>
-                                  </div>`;
+    for (let i = 0; i < movieDetails.sizes.length; i++) {
+      titleContainer.textContent = movieWrapper.innerHTML = title;
 
-    if (!movieDetails.on_sale) {
-      const hideDiscount = document.querySelector(".hideDiscount");
-      hideDiscount.style.display = "none";
+      createSizeOptions +=
+        `<option value=` +
+        movieDetails.sizes[i] +
+        `">` +
+        movieDetails.sizes[i] +
+        `</option>`;
+
+      movieWrapper.innerHTML = `
+                                <div class="movie">
+                                     <a href="product_info.html?id=${movie.id}&title=${movie.name}" class="movieImage">
+                                     <img src="${movie.images[0].src}" alt="${movie.images[0].alt}"></a>
+                                     <p class="movieText">${movie.name} </p>
+                                     <p class="movieText"><span class="movieSale">${movie.prices.regular_price} kr</span> <span class="discount">${movie.prices.sale_price} kr</span></p>
+                                     <a href="product_info.html?id=${movie.id}&title=${movie.name}" class="cta-button">Add to cart</a>
+                                   </div>`;
+
+      if (!movieDetails.onSale) {
+        const hideDiscount = document.querySelector(".hideDiscount");
+        hideDiscount.style.display = "none";
+      }
+
+      if (movieDetails.onSale) {
+        const getSaleSpan = document.querySelector(".sales");
+        getSaleSpan.classList.add("movieSale");
+      }
     }
-
-    if (movieDetails.on_sale) {
-      const getSaleSpan = document.querySelector(".sales");
-      getSaleSpan.classList.add("movieSale");
-    }
-    // }
   } catch (e) {
     console.error(e);
     error();
   }
 }
 
-createmovieHtml();
+createMovieHtml();
